@@ -9,5 +9,4 @@ public class PerfumeShopApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PerfumeShopApplication.class, args);
 	}
-
 }
