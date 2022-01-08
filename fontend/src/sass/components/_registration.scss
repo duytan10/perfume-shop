@@ -1,0 +1,100 @@
+.registration {
+    width: 500px;
+    margin: 0 auto;
+
+    h3,h4 {
+        text-align: center;
+    }
+
+    &__alert {
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 1rem;
+        color: #008000;
+        position: absolute;
+        font-weight: 600;
+    }
+
+    &__form {
+        margin-top: 3rem;
+
+        &__input {
+            border-bottom: 1px solid black;
+            width: 100%;
+            height: 2.875rem;
+            position: relative;
+
+            input {
+                border: 0;
+                width: 100%;
+                background-color: transparent;
+                outline: none;
+                height: 100%;
+            }
+        }
+
+        &__input > input:not(:placeholder-shown) + &__label,
+        &__input > input:focus + &__label {
+            top: 0;
+            color: #999;
+        }
+
+        &__input > input:not(:placeholder-shown) ~ .invalid-feedback-input {
+            display: block;
+            color: red;
+            font-weight: 600;
+        }
+
+        &__label {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            user-select: none;
+            pointer-events: none;
+            left: 0;
+            transition: 0.25s ease;
+        }
+
+        &__name {
+            @include flex(flex-start, space-between);
+
+            .registration__form__input {
+                width: 47%;
+            }
+        }
+
+        &__button {
+            margin: 4rem 0;
+            text-align: center;
+
+            button {
+                border: none;
+                border-radius: 50px;
+                padding: 1.3rem 3rem;
+                background-color: black;
+                color: white;
+                cursor: pointer;
+            }
+        }
+
+        .is-invalid {
+            border-bottom: 1px solid red;
+        }
+
+        .invalid-feedback {
+            color: red;
+            font-weight: 600;
+            margin-top: 0.3rem;
+        }
+    }
+
+    .captcha {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .invalid-feedback-input {
+        display: none;
+    }
+}

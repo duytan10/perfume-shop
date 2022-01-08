@@ -1,0 +1,60 @@
+.product-card {
+    margin-bottom: 30px;
+    position: relative;
+    background-color: white;
+    border-radius: 7%;
+
+    &__image {
+        padding-top: 100%;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 30px;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            height: 50%;
+        }
+    }
+
+    &__name {
+        color: $main-color;
+        font-size: 1.5rem;
+        font-weight: normal;
+        font-weight: 600;
+    }
+
+    &__price {
+        top: 0;
+        right: 0;
+        margin: 1rem 1rem 0 0;
+        position: absolute;
+        color: $main-color;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    &__btn {
+        position: absolute;
+        width: 100%;
+        top: 85%
+    }
+
+    &__bottom {
+        @include flex(center, space-between);
+        padding: 0 2rem;
+
+        &__item {
+            background-color: $main-color;
+            padding: 0.25rem;
+            border-radius: 25%;
+        }
+
+        i {
+            color: white;
+            font-size: 1.5rem;
+        }
+    }
+}

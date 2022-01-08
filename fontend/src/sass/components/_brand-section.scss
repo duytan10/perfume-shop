@@ -1,0 +1,21 @@
+.brand-section {
+
+    &__item {
+        
+        &__above {
+            @include flex(flex-start, space-between);
+        }
+
+        &__under {
+            @include flex(flex-start, space-evenly);
+        }
+
+        &__image {
+            width: 150px;
+
+            @include mobile {
+                width: 75px;
+            }
+        }
+    }
+}
